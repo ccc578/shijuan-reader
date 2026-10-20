@@ -1,0 +1,17 @@
+appId: com.shijuan.reader
+productName: 拾卷
+directories:
+  output: release
+files:
+  - out/**/*
+  - package.json
+win:
+  target:
+    - nsis
+    - portable
+mac:
+  target:
+    - dmg
+linux:
+  target:
+    - AppImage

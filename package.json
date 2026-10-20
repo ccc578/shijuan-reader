@@ -1,0 +1,44 @@
+{
+  "name": "shijuan-reader",
+  "productName": "拾卷",
+  "version": "0.2.0",
+  "description": "拾卷 ShiJuan —— 本地优先的桌面电子书阅读器，支持 TXT 与 EPUB",
+  "main": "./out/main/index.js",
+  "private": true,
+  "author": "ShiJuan",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "build": "electron-vite build",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "test": "vitest run",
+    "samples": "node scripts/make-samples.mjs",
+    "smoke": "node tests/smoke.mjs",
+    "dist": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "chardet": "^2.2.0",
+    "dompurify": "^3.4.17",
+    "fast-xml-parser": "^5.11.2",
+    "iconv-lite": "^0.7.3",
+    "jszip": "^3.10.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^44.9.0",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^6.0.0",
+    "playwright": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
+  }
+}
